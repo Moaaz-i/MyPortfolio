@@ -1,0 +1,44 @@
+{
+  "jprot: frontmatter": {
+    "prefix": "jf",
+    "body": [
+      "---",
+      "title: \${1:Page title}",
+      "description: \${2:one-line SEO description}",
+      "---"
+    ],
+    "description": "JPROT page frontmatter"
+  },
+  "jprot: post": {
+    "prefix": "jp",
+    "body": [
+      "---",
+      "title: \${1:Post title}",
+      "date: \${CURRENT_YEAR}-\${CURRENT_MONTH}-\${CURRENT_DATE}",
+      "tags: []",
+      "excerpt: \${2:one sentence for feeds}",
+      "---"
+    ],
+    "description": "JPROT blog post"
+  },
+  "jprot: section config": {
+    "prefix": "js",
+    "body": [
+      "{ component: '\${1:ComponentName}', title: '\${2:Section title}' },"
+    ],
+    "description": "JPROT homepage section entry"
+  },
+  "jprot: component": {
+    "prefix": "jc",
+    "body": [
+      "export default async function \${1:ComponentName}({ title = \${2:\"\"}, \${3:/* props */} }) {",
+      "  return `",
+      "    <section class=\"\${4:section}\">",
+      "      \${5:<!-- markup -->}",
+      "    </section>",
+      "  `",
+      "}"
+    ],
+    "description": "JPROT component skeleton"
+  }
+}

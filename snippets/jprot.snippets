@@ -1,0 +1,29 @@
+snippet jf "jprot: frontmatter"
+---
+title: ${1:Page title}
+description: ${2:one-line SEO description}
+---
+endsnippet
+
+snippet jp "jprot: post"
+---
+title: ${1:Post title}
+date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}
+tags: []
+excerpt: ${2:one sentence for feeds}
+---
+endsnippet
+
+snippet js "jprot: section config"
+{ component: '${1:ComponentName}', title: '${2:Section title}' },
+endsnippet
+
+snippet jc "jprot: component"
+export default async function ${1:ComponentName}({ title = ${2:""}, ${3:/* props */} }) {
+  return `
+    <section class="${4:section}">
+      ${5:<!-- markup -->}
+    </section>
+  `
+}
+endsnippet

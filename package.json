@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "jprot"
+  },
+  "dependencies": {
+    "jprot": "^0.2.2"
+  }
+}
