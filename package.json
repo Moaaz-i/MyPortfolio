@@ -2,7 +2,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "jprot"
+    "start": "jprot",
+    "build": "jprot export --out dist"
   },
   "dependencies": {
     "jprot": "^0.2.2"
