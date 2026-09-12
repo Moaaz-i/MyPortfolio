@@ -11,6 +11,6 @@ I build **zero-dependency developer tools**, **encrypted document databases**, *
 
 From React frontends and Node.js backends to C++ compilers and Arduino micro-RTOS kernels, I work across the full stack and into the hardware.
 
-**Based in Alexandria, Egypt 🇪🇬** · Open for freelance & full-time roles.
+**Based in Riyadh, Saudi Arabia 🇸🇦** · Open for freelance & full-time roles.
 
 [View Projects](#projects) | [About Me](/about) | [Contact](#contact)

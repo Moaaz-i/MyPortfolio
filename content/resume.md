@@ -7,7 +7,7 @@ order: 3
 name: Moaaz Yahia Zakaria
 role: Full-Stack & Systems Engineer
 email: moaaz.yahia.shrif@gmail.com
-location: Alexandria, Egypt
+location: Riyadh, Saudi Arabia
 social:
   - label: GitHub
     url: https://github.com/Moaaz-i
@@ -55,4 +55,4 @@ skills:
     description: REST, JWT, rate limiting, AES-256-GCM encryption, blind indexes
 ---
 
-I build developer tools, encrypted databases, HTTP engines, and embedded C++ systems — all zero-dependency, all production-ready. Based in Alexandria, Egypt. Open for full-time roles and freelance projects.
+I build developer tools, encrypted databases, HTTP engines, and embedded C++ systems — all zero-dependency, all production-ready. Based in Riyadh, Saudi Arabia. Open for full-time roles and freelance projects.
