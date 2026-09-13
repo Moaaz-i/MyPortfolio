@@ -30,6 +30,7 @@ export default {
   hero: {
     title: "Moaaz Yahia Zakaria",
     avatar: AVATAR,
+    photo: "/hero.png",
     subtitle:
       "Full-Stack & Systems Engineer — I build zero-dependency tools, encrypted databases, HTTP engines, and real-time embedded systems. Always shipping, always learning.",
     links: [

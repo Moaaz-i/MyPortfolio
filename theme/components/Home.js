@@ -21,6 +21,7 @@ export default function Home(props) {
   const title = hero.title || page.data.title || site.title || 'Hello'
   const subtitle = hero.subtitle || page.data.subtitle || site.tagline || ''
   const avatar = hero.avatar || site.avatar || ''
+  const heroPhoto = hero.photo || '/hero.png'
   const initials = (title || '')
     .replace(/[^A-Za-z ]/g, '')
     .split(/\s+/)
@@ -84,9 +85,13 @@ export default function Home(props) {
         <span class="orb orb-4"></span>
       </div>
       <div class="hero-inner">
-        ${avatar
-          ? `<div class="hero-avatar"><img src="${esc(avatar)}" alt="${esc(title)}" width="140" height="140"></div>`
-          : `<div class="hero-avatar hero-mono" aria-hidden="true"><span>${esc(initials)}</span></div>`}
+        ${
+          heroPhoto
+            ? `<figure class="hero-photo"><img src="${esc(heroPhoto)}" alt="${esc(title)}" width="1200" height="900" fetchpriority="high"></figure>`
+            : avatar
+              ? `<div class="hero-avatar"><img src="${esc(avatar)}" alt="${esc(title)}" width="140" height="140"></div>`
+              : `<div class="hero-avatar hero-mono" aria-hidden="true"><span>${esc(initials)}</span></div>`
+        }
         ${sameAs.length && siteUrl ? '' : `<span class="hero-badge">Open to work</span>`}
         <h1 class="hero-title">${esc(title)}</h1>
         <div class="hero-roles" aria-label="Roles">${roleWords}</div>
