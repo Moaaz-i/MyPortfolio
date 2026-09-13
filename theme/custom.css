@@ -1306,6 +1306,10 @@ body [id] {
   text-decoration: none;
 }
 
+.project-filters {
+  display:none;
+}
+
 /* =========================================================
    Scroll-reveal animations (JPROT IntersectionObserver)
    ========================================================= */
