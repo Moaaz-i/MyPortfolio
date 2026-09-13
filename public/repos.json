@@ -1,5 +1,40 @@
 [
   {
+    "name": "MyPortfolio",
+    "desc": "Portfolio of Moaaz Yahia Zakaria — Full-Stack & Systems Engineer specializing in zero-dependency developer tools, Node.js HTTP frameworks, encrypted databases, and embedded C++ systems.",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/MyPortfolio",
+    "demo": "https://moaaz-i.vercel.app",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 137,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": false,
+    "defaultBranch": "main",
+    "createdAt": "2026-09-11T21:57:14Z",
+    "pushedAt": "2026-09-13T05:10:49Z",
+    "updatedAt": "2026-09-13T05:10:53Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 72.4
+      },
+      {
+        "lang": "CSS",
+        "pct": 26.9
+      },
+      {
+        "lang": "Vim Snippet",
+        "pct": 0.7
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
     "name": "social_app",
     "desc": "",
     "lang": "JavaScript",
@@ -732,41 +767,6 @@
       "name": "v1.3.1 — Mission, responsibility, security ahead",
       "published": "2026-08-28T11:51:34Z"
     }
-  },
-  {
-    "name": "MyPortfolio",
-    "desc": "Portfolio of Moaaz Yahia Zakaria — Full-Stack & Systems Engineer specializing in zero-dependency developer tools, Node.js HTTP frameworks, encrypted databases, and embedded C++ systems.",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/MyPortfolio",
-    "demo": "https://moaaz-i.vercel.app",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 137,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": false,
-    "defaultBranch": "main",
-    "createdAt": "2026-09-11T21:57:14Z",
-    "pushedAt": "2026-09-12T09:47:29Z",
-    "updatedAt": "2026-09-12T09:47:32Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 68.2
-      },
-      {
-        "lang": "CSS",
-        "pct": 31
-      },
-      {
-        "lang": "Vim Snippet",
-        "pct": 0.8
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
   },
   {
     "name": "Assignment-6--Sequelize",

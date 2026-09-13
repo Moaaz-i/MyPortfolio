@@ -5,6 +5,7 @@
 import { execFile } from 'node:child_process'
 import { promisify } from 'node:util'
 import { readFile, writeFile, mkdir } from 'node:fs/promises'
+import { existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -12,6 +13,13 @@ const execFileP = promisify(execFile)
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const OWNER = 'Moaaz-i'
 const POOL = 10
+const TOKEN = process.env.GITHUB_TOKEN || ''
+const API = 'https://api.github.com'
+const headers = {
+  'User-Agent': 'MozPortfolio-gen',
+  Accept: 'application/vnd.github+json',
+  ...(TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {}),
+}
 
 // Derive the live demo URL purely from GitHub's own repo fields — the
 // `homepage` setting when set, otherwise the GitHub Pages site. Nothing is
@@ -31,18 +39,6 @@ function liveDemo(r) {
   return ''
 }
 
-// Prefer the authenticated `gh` CLI (fast, high rate limit); fall back to the
-// unauthenticated GitHub REST API for the bare listing (no per-repo enrichment)
-// so the build still works on machines without `gh`.
-async function hasGh() {
-  try {
-    await execFileP('gh', ['--version'])
-    return true
-  } catch {
-    return false
-  }
-}
-
 async function readHidden() {
   try {
     const d = JSON.parse(await readFile(join(root, 'public', 'repos-hidden.json'), 'utf8'))
@@ -52,17 +48,37 @@ async function readHidden() {
   }
 }
 
+async function api(path) {
+  const res = await fetch(`${API}${path}`, { headers })
+  if (!res.ok) throw new Error(`GitHub API ${res.status}`)
+  return res.json()
+}
+
+async function enrichApi(name) {
+  const [langsRaw, contribs, releases] = await Promise.all([
+    api(`/repos/${OWNER}/${name}/languages`),
+    api(`/repos/${OWNER}/${name}/contributors?per_page=100`).catch(() => []),
+    api(`/repos/${OWNER}/${name}/releases?per_page=1`).catch(() => []),
+  ])
+  return buildEnrich(langsRaw, contribs, releases)
+}
+
+async function enrichGh(name) {
+  const [langsRaw, contribs, releases] = await Promise.all([
+    gh(`repos/${OWNER}/${name}/languages`),
+    gh(`repos/${OWNER}/${name}/contributors?per_page=100`).catch(() => []),
+    gh(`repos/${OWNER}/${name}/releases?per_page=1`).catch(() => []),
+  ])
+  return buildEnrich(langsRaw, contribs, releases)
+}
+
 async function gh(args) {
-  const { stdout } = await execFileP('gh', ['api', ...args], { maxBuffer: 64 * 1024 * 1024 })
+  const argList = Array.isArray(args) ? args : [args]
+  const { stdout } = await execFileP('gh', ['api', ...argList], { maxBuffer: 64 * 1024 * 1024 })
   return JSON.parse(stdout)
 }
 
-async function enrich(name) {
-  const [langsRaw, contribs, releases] = await Promise.all([
-    gh([`repos/${OWNER}/${name}/languages`]),
-    gh([`repos/${OWNER}/${name}/contributors?per_page=100`]).catch(() => []),
-    gh([`repos/${OWNER}/${name}/releases?per_page=1`]).catch(() => []),
-  ])
+function buildEnrich(langsRaw, contribs, releases) {
   const totalBytes = Object.values(langsRaw).reduce((a, b) => a + b, 0)
   const topLangs = Object.entries(langsRaw)
     .map(([lang, bytes]) => ({ lang, pct: totalBytes ? Math.round((bytes / totalBytes) * 1000) / 10 : 0 }))
@@ -74,20 +90,29 @@ async function enrich(name) {
   return { topLangs, contributors: Array.isArray(contribs) ? contribs.length : 0, latestRelease }
 }
 
+async function hasGh() {
+  try {
+    await execFileP('gh', ['--version'])
+    return true
+  } catch {
+    return false
+  }
+}
+
 async function main() {
+  // Prefer the authenticated `gh` CLI locally (fast, high rate limit, full
+  // enrichment). On CI without gh we use the REST API; a GITHUB_TOKEN enables
+  // the same per-repo enrichment there.
   const ghAvailable = await hasGh()
-  let raw = []
+  const raw = []
   if (ghAvailable) {
     const listOut = await execFileP('gh', ['api', `users/${OWNER}/repos?per_page=100&sort=updated`, '--paginate'], { maxBuffer: 64 * 1024 * 1024 })
-    raw = JSON.parse(listOut.stdout)
+    raw.push(...JSON.parse(listOut.stdout))
   } else {
-    // unauthenticated fallback: plain listing, no enrichment
     for (let page = 1; ; page++) {
-      const res = await fetch(`https://api.github.com/users/${OWNER}/repos?per_page=100&page=${page}&sort=updated`)
-      if (!res.ok) throw new Error(`GitHub API ${res.status}`)
-      const rows = await res.json()
+      const rows = await api(`/users/${OWNER}/repos?per_page=100&page=${page}&sort=updated`)
       if (!Array.isArray(rows) || !rows.length) break
-      raw = raw.concat(rows)
+      raw.push(...rows)
       if (rows.length < 100) break
     }
   }
@@ -95,11 +120,15 @@ async function main() {
   const hidden = await readHidden()
   const visible = rows.filter((r) => hidden.indexOf(r.name) === -1)
   const emptyEnrich = { topLangs: [], contributors: 0, latestRelease: null }
+  // Per-repo enrichment costs 3 API calls/repo; without auth there's no budget
+  // for that on CI, so enrich only when gh or a token is available.
+  const canEnrich = ghAvailable || Boolean(TOKEN)
+  const enrichOne = ghAvailable ? enrichGh : enrichApi
   const repos = []
   for (let i = 0; i < visible.length; i += POOL) {
     const batch = visible.slice(i, i + POOL)
-    const enriched = ghAvailable
-      ? await Promise.all(batch.map((r) => enrich(r.name)))
+    const enriched = canEnrich
+      ? await Promise.all(batch.map((r) => enrichOne(r.name)))
       : batch.map(() => emptyEnrich)
     batch.forEach((r, j) => {
       const e = enriched[j]
@@ -134,4 +163,15 @@ async function main() {
   console.log(`wrote public/repos.json — ${repos.length} original repos (${skipped} excluded: forks + hidden)`)
 }
 
-main().catch((err) => { console.error(err.message || err); process.exit(1) })
+// Fail hard on a genuinely missing source, but degrade gracefully: if GitHub is
+// unreachable/rate-limited during a build we keep the last committed snapshot so
+// deployments never break just because the API reset.
+main().catch((err) => {
+  const stale = join(root, 'public', 'repos.json')
+  if (existsSync(stale)) {
+    console.error(`[gen-repos] ${err.message} — keeping existing public/repos.json`)
+    process.exit(0)
+  }
+  console.error(err.message || err)
+  process.exit(1)
+})
