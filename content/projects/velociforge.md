@@ -2,7 +2,7 @@
 title: VelociForge
 order: 6
 date: 2026-08-12
-cover: /covers/velociforge.svg
+cover: /shots/velociforge.png
 image: /covers/velociforge.svg
 excerpt: Virtualized package engine with 0.70ms startup, SBOM generation, and OSV/CVE security auditing for Node.js.
 tags:

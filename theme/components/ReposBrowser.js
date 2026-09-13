@@ -34,6 +34,20 @@ function monthYear(iso) {
   }
 }
 
+// On-demand screenshot provider (WordPress mshots) — captures a fresh picture of
+// the live site when a visitor opens the page, and caches it server-side.
+// Initializer prefers the local static shot; live-shots.js upgrades to a fresh
+// capture per visit.
+function shotProvider(url, stamp) {
+  return 'https://s0.wp.com/mshots/v1/' + encodeURIComponent(String(url || '')) + '?w=1024&h=640&v=' + (stamp || new Date().toISOString().slice(0, 10))
+}
+
+function isRealSite(url) {
+  if (!/^https?:\/\//i.test(String(url || ''))) return false
+  const host = String(url).replace(/^https?:\/\//i, '').split('/')[0].toLowerCase()
+  return !/^(www\.)?github\.com$/.test(host)
+}
+
 async function loadRepos() {
   try {
     const txt = await readFile(new URL('../../public/repos.json', import.meta.url), 'utf8')
@@ -48,8 +62,12 @@ function repoCard(r) {
   const chips = topics.slice(0, 4).map((t) => `<span class="chip">${esc(t)}</span>`).join('')
   const moreChips = topics.length > 4 ? `<span class="chip">+${topics.length - 4}</span>` : ''
   const stack = (r.topLangs || []).map((l) => esc(l.lang)).join(' · ')
+  const liveShot = isRealSite(r.demo)
+    ? `<a class="repo-shot" href="${esc(r.demo)}" target="_blank" rel="noopener" aria-label="Open live preview of ${esc(r.name)}"><img src="${r.shot ? esc(r.shot) : esc(shotProvider(r.demo))}" alt="Live preview of ${esc(r.name)}" loading="lazy" data-live-shot data-live="${esc(r.demo)}" data-static="${esc(r.shot || '')}"></a>`
+    : ''
   return `
     <article class="repo-card">
+      ${liveShot}
       <div class="repo-card-top">
         <h3 class="repo-name"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)}</a></h3>
         <div class="repo-badges">

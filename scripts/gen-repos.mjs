@@ -13,6 +13,36 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const OWNER = 'Moaaz-i'
 const POOL = 10
 
+// Derive the live demo URL purely from GitHub's own repo fields — the
+// `homepage` setting when set, otherwise the GitHub Pages site. Nothing is
+// hand-written here.
+function liveDemo(r) {
+  if (r.homepage && /^https?:\/\//i.test(String(r.homepage))) {
+    const h = String(r.homepage).replace(/^https?:\/\//i, '').split('/')[0].toLowerCase()
+    if (h.indexOf('github.com') === -1) return r.homepage
+  }
+  if (r.has_pages && !/\.github\.io\/?$/.test(String(r.name || ''))) {
+    return `https://${OWNER}.github.io/${String(r.name)}/`
+  }
+  // user/org site repos (owner.github.io) live at the root, not a /repo/ path
+  if (r.has_pages && /\.github\.io\/?$/i.test(String(r.name || ''))) {
+    return `https://${String(r.name).replace(/[\\/]+$/, '')}/`
+  }
+  return ''
+}
+
+// Prefer the authenticated `gh` CLI (fast, high rate limit); fall back to the
+// unauthenticated GitHub REST API for the bare listing (no per-repo enrichment)
+// so the build still works on machines without `gh`.
+async function hasGh() {
+  try {
+    await execFileP('gh', ['--version'])
+    return true
+  } catch {
+    return false
+  }
+}
+
 async function readHidden() {
   try {
     const d = JSON.parse(await readFile(join(root, 'public', 'repos-hidden.json'), 'utf8'))
@@ -45,15 +75,32 @@ async function enrich(name) {
 }
 
 async function main() {
-  const listOut = await execFileP('gh', ['api', `users/${OWNER}/repos?per_page=100&sort=updated`, '--paginate'], { maxBuffer: 64 * 1024 * 1024 })
-  const raw = JSON.parse(listOut.stdout)
+  const ghAvailable = await hasGh()
+  let raw = []
+  if (ghAvailable) {
+    const listOut = await execFileP('gh', ['api', `users/${OWNER}/repos?per_page=100&sort=updated`, '--paginate'], { maxBuffer: 64 * 1024 * 1024 })
+    raw = JSON.parse(listOut.stdout)
+  } else {
+    // unauthenticated fallback: plain listing, no enrichment
+    for (let page = 1; ; page++) {
+      const res = await fetch(`https://api.github.com/users/${OWNER}/repos?per_page=100&page=${page}&sort=updated`)
+      if (!res.ok) throw new Error(`GitHub API ${res.status}`)
+      const rows = await res.json()
+      if (!Array.isArray(rows) || !rows.length) break
+      raw = raw.concat(rows)
+      if (rows.length < 100) break
+    }
+  }
   const rows = raw.filter((r) => !r.fork) // exclude forks
   const hidden = await readHidden()
   const visible = rows.filter((r) => hidden.indexOf(r.name) === -1)
+  const emptyEnrich = { topLangs: [], contributors: 0, latestRelease: null }
   const repos = []
   for (let i = 0; i < visible.length; i += POOL) {
     const batch = visible.slice(i, i + POOL)
-    const enriched = await Promise.all(batch.map((r) => enrich(r.name)))
+    const enriched = ghAvailable
+      ? await Promise.all(batch.map((r) => enrich(r.name)))
+      : batch.map(() => emptyEnrich)
     batch.forEach((r, j) => {
       const e = enriched[j]
       repos.push({
@@ -61,7 +108,7 @@ async function main() {
         desc: (r.description || '').replace(/\s+/g, ' ').trim(),
         lang: r.language || '',
         url: r.html_url,
-        demo: r.homepage || '',
+        demo: liveDemo(r),
         stars: r.stargazers_count || 0,
         forks: r.forks_count || 0,
         openIssues: r.open_issues_count || 0,

@@ -8,6 +8,7 @@
 
   if (!('fetch' in window)) return
 
+  var OWNER = 'Moaaz-i'
   var CACHE = null
   var HIDDEN = null
   var pager = null
@@ -58,17 +59,47 @@
     return CACHE.filter(function (r) { return HIDDEN.indexOf(r.name) === -1 })
   }
 
+  // Derive the live demo URL straight from GitHub data — repo `homepage`
+  // setting if set, else its GitHub Pages site. Nothing is hand-written.
+  function liveDemo(l) {
+    if (l.homepage && /^https?:\/\//i.test(String(l.homepage))) {
+      var h = String(l.homepage).replace(/^https?:\/\//i, '').split('/')[0].toLowerCase()
+      if (h.indexOf('github.com') === -1) return l.homepage
+    }
+    if (l.has_pages && !/\.github\.io\/?$/.test(String(l.name))) {
+      return 'https://' + OWNER + '.github.io/' + String(l.name) + '/'
+    }
+    return ''
+  }
+
+  // Fetch the FULL live listing from GitHub (paginated until empty) so every
+  // original repo appears — new ones show up, deleted ones drop out, forks stay
+  // excluded. Works with zero local JSON as well.
+  function fetchLiveListing() {
+    var all = []
+    var page = 1
+    function next() {
+      return fetch('https://api.github.com/users/' + OWNER + '/repos?per_page=100&page=' + page + '&sort=updated')
+        .then(function (r) {
+          if (!r.ok) throw new Error('live listing unavailable')
+          return r.json()
+        })
+        .then(function (rows) {
+          if (!Array.isArray(rows) || !rows.length) return all
+          all = all.concat(rows)
+          if (rows.length === 100) { page++; return next() }
+          return all
+        })
+    }
+    return next()
+  }
+
   // Merge a live GitHub listing with the enriched (but possibly stale) snapshot.
   // Deleted repos drop out automatically; newly created ones appear; forks are
   // always excluded. Falls back to a cached listing from this session.
   function syncFromGitHub() {
-    fetch('https://api.github.com/users/Moaaz-i/repos?per_page=100&sort=updated')
-      .then(function (r) {
-        if (!r.ok) throw new Error('live listing unavailable')
-        return r.json()
-      })
+    fetchLiveListing()
       .then(function (rows) {
-        if (!Array.isArray(rows)) throw new Error('unexpected payload')
         mergeLive(rows)
         sessionCache(rows)
         rebuild()
@@ -100,7 +131,7 @@
         desc: (l.description || '').replace(/\s+/g, ' ').trim(),
         lang: l.language || '',
         url: l.html_url,
-        demo: l.homepage || '',
+        demo: liveDemo(l),
         stars: l.stargazers_count || 0,
         forks: l.forks_count || 0,
         openIssues: l.open_issues_count || 0,
@@ -115,7 +146,8 @@
         updatedAt: l.updated_at || p.updatedAt || '',
         topLangs: p.topLangs || [],
         contributors: p.contributors || 0,
-        latestRelease: p.latestRelease || null
+        latestRelease: p.latestRelease || null,
+        shot: p.shot || ''
       })
     })
     CACHE = merged
@@ -173,13 +205,29 @@
     } catch (e) { return '' }
   }
 
+  // Matches the SSR provider so pagination cards show the same live preview
+  // behaviour (local static first, then a fresh on-demand capture per visit).
+  function shotProvider(url, stamp) {
+    return 'https://s0.wp.com/mshots/v1/' + encodeURIComponent(String(url || '')) + '?w=1024&h=640&v=' + (stamp || new Date().toISOString().slice(0, 10))
+  }
+
+  function isRealSite(url) {
+    if (!/^https?:\/\//i.test(String(url || ''))) return false
+    var host = String(url).replace(/^https?:\/\//i, '').split('/')[0].toLowerCase()
+    return !/^(www\.)?github\.com$/.test(host)
+  }
+
   function card(r) {
     var topics = r.topics || []
     var chips = topics.slice(0, 4).map(function (t) { return '<span class="chip">' + esc(t) + '</span>' }).join('')
     var moreChips = topics.length > 4 ? '<span class="chip">+' + (topics.length - 4) + '</span>' : ''
     var stack = (r.topLangs || []).map(function (l) { return esc(l.lang) }).join(' · ')
+    var liveShot = isRealSite(r.demo)
+      ? `<a class="repo-shot" href="${esc(r.demo)}" target="_blank" rel="noopener" aria-label="Open live preview of ${esc(r.name)}"><img src="${r.shot ? esc(r.shot) : esc(shotProvider(r.demo))}" alt="Live preview of ${esc(r.name)}" loading="lazy" data-live-shot data-live="${esc(r.demo)}" data-static="${esc(r.shot || '')}"></a>`
+      : ''
     return `
       <article class="repo-card">
+        ${liveShot}
         <div class="repo-card-top">
           <h3 class="repo-name"><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.name)}</a></h3>
           <div class="repo-badges">

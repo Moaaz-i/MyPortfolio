@@ -1,30 +1,628 @@
 [
   {
-    "name": "JPROT",
+    "name": "social_app",
     "desc": "",
     "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/JPROT",
-    "demo": "",
+    "url": "https://github.com/Moaaz-i/social_app",
+    "demo": "https://fastsocial.vercel.app/",
     "stars": 0,
     "forks": 0,
     "openIssues": 0,
-    "sizeKb": 397,
+    "sizeKb": 563,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-11-09T16:10:14Z",
+    "pushedAt": "2026-07-29T06:16:55Z",
+    "updatedAt": "2026-09-13T05:03:40Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 92.9
+      },
+      {
+        "lang": "CSS",
+        "pct": 6.8
+      },
+      {
+        "lang": "HTML",
+        "pct": 0.2
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Engage_Bakery",
+    "desc": "",
+    "lang": "HTML",
+    "url": "https://github.com/Moaaz-i/Engage_Bakery",
+    "demo": "https://moaaz-i.github.io/Engage_Bakery/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 892,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-07-01T15:07:28Z",
+    "pushedAt": "2025-07-01T20:22:42Z",
+    "updatedAt": "2026-09-13T04:36:47Z",
+    "topLangs": [
+      {
+        "lang": "HTML",
+        "pct": 69
+      },
+      {
+        "lang": "CSS",
+        "pct": 31
+      }
+    ],
+    "contributors": 0,
+    "latestRelease": null
+  },
+  {
+    "name": "DevFolio",
+    "desc": "",
+    "lang": "HTML",
+    "url": "https://github.com/Moaaz-i/DevFolio",
+    "demo": "https://moaaz-i.github.io/DevFolio/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 1439,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-07-23T15:06:49Z",
+    "pushedAt": "2025-07-29T17:39:41Z",
+    "updatedAt": "2026-09-13T04:36:14Z",
+    "topLangs": [
+      {
+        "lang": "HTML",
+        "pct": 86.6
+      },
+      {
+        "lang": "CSS",
+        "pct": 12.5
+      },
+      {
+        "lang": "JavaScript",
+        "pct": 0.9
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Mealify",
+    "desc": "",
+    "lang": "CSS",
+    "url": "https://github.com/Moaaz-i/Mealify",
+    "demo": "https://moaaz-i.github.io/Mealify/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 6886,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-07-10T11:09:37Z",
+    "pushedAt": "2025-07-11T07:56:54Z",
+    "updatedAt": "2026-09-13T04:36:06Z",
+    "topLangs": [
+      {
+        "lang": "CSS",
+        "pct": 89.6
+      },
+      {
+        "lang": "HTML",
+        "pct": 10
+      },
+      {
+        "lang": "JavaScript",
+        "pct": 0.4
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Fokir",
+    "desc": "",
+    "lang": "CSS",
+    "url": "https://github.com/Moaaz-i/Fokir",
+    "demo": "https://moaaz-i.github.io/Fokir/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 671,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-07-04T15:12:38Z",
+    "pushedAt": "2025-07-07T10:38:09Z",
+    "updatedAt": "2026-09-13T04:35:56Z",
+    "topLangs": [
+      {
+        "lang": "CSS",
+        "pct": 57.6
+      },
+      {
+        "lang": "HTML",
+        "pct": 40.1
+      },
+      {
+        "lang": "JavaScript",
+        "pct": 2.3
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Grid_masterclass",
+    "desc": "",
+    "lang": "HTML",
+    "url": "https://github.com/Moaaz-i/Grid_masterclass",
+    "demo": "https://moaaz-i.github.io/Grid_masterclass/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 700,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-08-05T20:24:19Z",
+    "pushedAt": "2025-08-05T20:32:11Z",
+    "updatedAt": "2026-09-13T04:35:48Z",
+    "topLangs": [
+      {
+        "lang": "HTML",
+        "pct": 100
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Exam",
+    "desc": "",
+    "lang": "HTML",
+    "url": "https://github.com/Moaaz-i/Exam",
+    "demo": "https://moaaz-i.github.io/Exam/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 1489,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-08-10T19:01:40Z",
+    "pushedAt": "2025-08-11T06:58:18Z",
+    "updatedAt": "2026-09-13T04:35:40Z",
+    "topLangs": [
+      {
+        "lang": "HTML",
+        "pct": 100
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "crud_system",
+    "desc": "",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/crud_system",
+    "demo": "https://moaaz-i.github.io/crud_system/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 691,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-08-24T15:16:24Z",
+    "pushedAt": "2025-08-24T17:54:21Z",
+    "updatedAt": "2026-09-13T04:33:40Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 62.7
+      },
+      {
+        "lang": "HTML",
+        "pct": 33.3
+      },
+      {
+        "lang": "CSS",
+        "pct": 3.9
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Random-Quote-Generator",
+    "desc": "",
+    "lang": "CSS",
+    "url": "https://github.com/Moaaz-i/Random-Quote-Generator",
+    "demo": "https://moaaz-i.github.io/Random-Quote-Generator/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 4,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-08-20T14:27:50Z",
+    "pushedAt": "2025-08-20T14:56:24Z",
+    "updatedAt": "2026-09-13T04:33:32Z",
+    "topLangs": [
+      {
+        "lang": "CSS",
+        "pct": 49.9
+      },
+      {
+        "lang": "JavaScript",
+        "pct": 41.5
+      },
+      {
+        "lang": "HTML",
+        "pct": 8.6
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Bookmark",
+    "desc": "",
+    "lang": "TypeScript",
+    "url": "https://github.com/Moaaz-i/Bookmark",
+    "demo": "https://moaaz-i.github.io/Bookmark/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 538,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-08-25T17:38:54Z",
+    "pushedAt": "2025-08-26T05:44:20Z",
+    "updatedAt": "2026-09-13T04:33:22Z",
+    "topLangs": [
+      {
+        "lang": "TypeScript",
+        "pct": 43.4
+      },
+      {
+        "lang": "HTML",
+        "pct": 34.1
+      },
+      {
+        "lang": "CSS",
+        "pct": 22.5
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Login-System",
+    "desc": "",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/Login-System",
+    "demo": "https://moaaz-i.github.io/Login-System/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 299,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-09-03T07:17:41Z",
+    "pushedAt": "2025-09-05T07:48:11Z",
+    "updatedAt": "2026-09-13T04:33:13Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 59.5
+      },
+      {
+        "lang": "HTML",
+        "pct": 34.4
+      },
+      {
+        "lang": "CSS",
+        "pct": 6.1
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Weather",
+    "desc": "",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/Weather",
+    "demo": "https://moaaz-i.github.io/Weather/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 310,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2025-09-10T17:40:03Z",
+    "pushedAt": "2025-09-10T18:06:26Z",
+    "updatedAt": "2026-09-13T04:32:45Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 41.7
+      },
+      {
+        "lang": "CSS",
+        "pct": 30.7
+      },
+      {
+        "lang": "HTML",
+        "pct": 27.6
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "microtaskx.github.io",
+    "desc": "",
+    "lang": "CSS",
+    "url": "https://github.com/Moaaz-i/microtaskx.github.io",
+    "demo": "https://moaaz-i.github.io/microtaskx.github.io/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 72,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2026-06-24T02:35:31Z",
+    "pushedAt": "2026-06-24T05:36:52Z",
+    "updatedAt": "2026-09-13T04:31:28Z",
+    "topLangs": [
+      {
+        "lang": "CSS",
+        "pct": 51.5
+      },
+      {
+        "lang": "HTML",
+        "pct": 48.5
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Needful",
+    "desc": "",
+    "lang": "TypeScript",
+    "url": "https://github.com/Moaaz-i/Needful",
+    "demo": "https://needful.vercel.app/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 1093,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": false,
+    "defaultBranch": "main",
+    "createdAt": "2025-11-29T13:26:17Z",
+    "pushedAt": "2026-07-28T03:53:00Z",
+    "updatedAt": "2026-09-13T04:30:47Z",
+    "topLangs": [
+      {
+        "lang": "TypeScript",
+        "pct": 98
+      },
+      {
+        "lang": "CSS",
+        "pct": 1.9
+      },
+      {
+        "lang": "JavaScript",
+        "pct": 0.1
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "AeroCI",
+    "desc": "",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/AeroCI",
+    "demo": "https://moaaz-i.github.io/AeroCI/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 2362,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2026-08-12T04:31:46Z",
+    "pushedAt": "2026-08-12T14:24:35Z",
+    "updatedAt": "2026-09-13T04:30:13Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 95.8
+      },
+      {
+        "lang": "HTML",
+        "pct": 4.2
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "line-seeker",
+    "desc": "",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/line-seeker",
+    "demo": "https://moaaz-i.github.io/line-seeker/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 3381,
     "license": "MIT",
     "topics": [],
     "archived": false,
     "hasPages": true,
     "defaultBranch": "main",
-    "createdAt": "2026-09-06T03:41:32Z",
-    "pushedAt": "2026-09-11T15:44:37Z",
-    "updatedAt": "2026-09-11T15:44:42Z",
+    "createdAt": "2026-08-30T04:14:37Z",
+    "pushedAt": "2026-09-01T18:05:13Z",
+    "updatedAt": "2026-09-13T04:29:27Z",
     "topLangs": [
       {
         "lang": "JavaScript",
-        "pct": 84.5
+        "pct": 58.7
       },
       {
-        "lang": "CSS",
-        "pct": 15.5
+        "lang": "TypeScript",
+        "pct": 41.3
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "velociforge",
+    "desc": "",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/velociforge",
+    "demo": "https://moaaz-i.github.io/velociforge/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 840,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2026-08-11T16:59:04Z",
+    "pushedAt": "2026-08-12T14:34:58Z",
+    "updatedAt": "2026-09-13T04:29:00Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 91.7
+      },
+      {
+        "lang": "HTML",
+        "pct": 8.3
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "Velociradix",
+    "desc": "",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/Velociradix",
+    "demo": "https://moaaz-i.github.io/Velociradix/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 5430,
+    "license": "MIT",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2026-08-06T04:25:27Z",
+    "pushedAt": "2026-08-27T14:39:05Z",
+    "updatedAt": "2026-09-13T04:28:42Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 63.6
+      },
+      {
+        "lang": "C++",
+        "pct": 33.4
+      },
+      {
+        "lang": "HTML",
+        "pct": 1.8
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": {
+      "tag": "v8.3.1",
+      "name": "v8.3.1",
+      "published": "2026-08-27T14:36:05Z"
+    }
+  },
+  {
+    "name": "flash-mysql",
+    "desc": "",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/flash-mysql",
+    "demo": "https://moaaz-i.github.io/flash-mysql/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 95,
+    "license": "Apache-2.0",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2026-08-27T07:00:52Z",
+    "pushedAt": "2026-08-27T07:13:33Z",
+    "updatedAt": "2026-09-13T04:28:11Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 95.4
+      },
+      {
+        "lang": "TypeScript",
+        "pct": 4.6
       }
     ],
     "contributors": 1,
@@ -32,10 +630,10 @@
   },
   {
     "name": "editable-table",
-    "desc": "",
+    "desc": "editable table",
     "lang": "JavaScript",
     "url": "https://github.com/Moaaz-i/editable-table",
-    "demo": "",
+    "demo": "https://editable-table-moaaz.netlify.app/",
     "stars": 0,
     "forks": 0,
     "openIssues": 0,
@@ -47,7 +645,7 @@
     "defaultBranch": "main",
     "createdAt": "2026-09-07T14:23:30Z",
     "pushedAt": "2026-09-09T04:55:38Z",
-    "updatedAt": "2026-09-09T04:55:43Z",
+    "updatedAt": "2026-09-13T04:27:44Z",
     "topLangs": [
       {
         "lang": "JavaScript",
@@ -60,6 +658,111 @@
       {
         "lang": "HTML",
         "pct": 0.4
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "JPROT",
+    "desc": "JPROT — Portfolio Site Generator Without a Build Step",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/JPROT",
+    "demo": "https://moaaz-i.github.io/JPROT/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 422,
+    "license": "MIT",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2026-09-06T03:41:32Z",
+    "pushedAt": "2026-09-12T11:30:37Z",
+    "updatedAt": "2026-09-13T04:27:06Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 84.2
+      },
+      {
+        "lang": "CSS",
+        "pct": 15.8
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": null
+  },
+  {
+    "name": "FLASH",
+    "desc": "Next-Gen Zero-Knowledge Encrypted Document Database Engine",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/FLASH",
+    "demo": "https://moaaz-i.github.io/FLASH/",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 20708,
+    "license": "Apache-2.0",
+    "topics": [],
+    "archived": false,
+    "hasPages": true,
+    "defaultBranch": "main",
+    "createdAt": "2026-08-16T18:25:38Z",
+    "pushedAt": "2026-08-28T11:54:33Z",
+    "updatedAt": "2026-09-13T04:25:32Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 96.2
+      },
+      {
+        "lang": "HTML",
+        "pct": 1.8
+      },
+      {
+        "lang": "CSS",
+        "pct": 1.7
+      }
+    ],
+    "contributors": 1,
+    "latestRelease": {
+      "tag": "v1.3.1",
+      "name": "v1.3.1 — Mission, responsibility, security ahead",
+      "published": "2026-08-28T11:51:34Z"
+    }
+  },
+  {
+    "name": "MyPortfolio",
+    "desc": "Portfolio of Moaaz Yahia Zakaria — Full-Stack & Systems Engineer specializing in zero-dependency developer tools, Node.js HTTP frameworks, encrypted databases, and embedded C++ systems.",
+    "lang": "JavaScript",
+    "url": "https://github.com/Moaaz-i/MyPortfolio",
+    "demo": "https://moaaz-i.vercel.app",
+    "stars": 0,
+    "forks": 0,
+    "openIssues": 0,
+    "sizeKb": 137,
+    "license": "",
+    "topics": [],
+    "archived": false,
+    "hasPages": false,
+    "defaultBranch": "main",
+    "createdAt": "2026-09-11T21:57:14Z",
+    "pushedAt": "2026-09-12T09:47:29Z",
+    "updatedAt": "2026-09-12T09:47:32Z",
+    "topLangs": [
+      {
+        "lang": "JavaScript",
+        "pct": 68.2
+      },
+      {
+        "lang": "CSS",
+        "pct": 31
+      },
+      {
+        "lang": "Vim Snippet",
+        "pct": 0.8
       }
     ],
     "contributors": 1,
@@ -93,146 +796,6 @@
     "latestRelease": null
   },
   {
-    "name": "line-seeker",
-    "desc": "",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/line-seeker",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 3381,
-    "license": "MIT",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2026-08-30T04:14:37Z",
-    "pushedAt": "2026-09-01T18:05:13Z",
-    "updatedAt": "2026-09-01T18:23:38Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 58.7
-      },
-      {
-        "lang": "TypeScript",
-        "pct": 41.3
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "FLASH",
-    "desc": "Next-Gen Zero-Knowledge Encrypted Document Database Engine",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/FLASH",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 20708,
-    "license": "Apache-2.0",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2026-08-16T18:25:38Z",
-    "pushedAt": "2026-08-28T11:54:33Z",
-    "updatedAt": "2026-08-28T11:55:45Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 96.2
-      },
-      {
-        "lang": "HTML",
-        "pct": 1.8
-      },
-      {
-        "lang": "CSS",
-        "pct": 1.7
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": {
-      "tag": "v1.3.1",
-      "name": "v1.3.1 — Mission, responsibility, security ahead",
-      "published": "2026-08-28T11:51:34Z"
-    }
-  },
-  {
-    "name": "Velociradix",
-    "desc": "",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/Velociradix",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 5430,
-    "license": "MIT",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2026-08-06T04:25:27Z",
-    "pushedAt": "2026-08-27T14:39:05Z",
-    "updatedAt": "2026-08-27T14:57:10Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 63.6
-      },
-      {
-        "lang": "C++",
-        "pct": 33.4
-      },
-      {
-        "lang": "HTML",
-        "pct": 1.8
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": {
-      "tag": "v8.3.1",
-      "name": "v8.3.1",
-      "published": "2026-08-27T14:36:05Z"
-    }
-  },
-  {
-    "name": "flash-mysql",
-    "desc": "",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/flash-mysql",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 95,
-    "license": "Apache-2.0",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2026-08-27T07:00:52Z",
-    "pushedAt": "2026-08-27T07:13:33Z",
-    "updatedAt": "2026-08-27T07:14:05Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 95.4
-      },
-      {
-        "lang": "TypeScript",
-        "pct": 4.6
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
     "name": "Assignment_MySQL-5",
     "desc": "",
     "lang": "JavaScript",
@@ -254,68 +817,6 @@
       {
         "lang": "JavaScript",
         "pct": 100
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "velociforge",
-    "desc": "",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/velociforge",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 840,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2026-08-11T16:59:04Z",
-    "pushedAt": "2026-08-12T14:34:58Z",
-    "updatedAt": "2026-08-12T14:37:19Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 91.7
-      },
-      {
-        "lang": "HTML",
-        "pct": 8.3
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "AeroCI",
-    "desc": "",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/AeroCI",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 2362,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2026-08-12T04:31:46Z",
-    "pushedAt": "2026-08-12T14:24:35Z",
-    "updatedAt": "2026-08-12T14:26:09Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 95.8
-      },
-      {
-        "lang": "HTML",
-        "pct": 4.2
       }
     ],
     "contributors": 1,
@@ -397,76 +898,6 @@
       {
         "lang": "TypeScript",
         "pct": 100
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "social_app",
-    "desc": "",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/social_app",
-    "demo": "https://social-app-two-tau.vercel.app",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 563,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-11-09T16:10:14Z",
-    "pushedAt": "2026-07-29T06:16:55Z",
-    "updatedAt": "2026-07-29T06:17:31Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 92.9
-      },
-      {
-        "lang": "CSS",
-        "pct": 6.8
-      },
-      {
-        "lang": "HTML",
-        "pct": 0.2
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "Needful",
-    "desc": "",
-    "lang": "TypeScript",
-    "url": "https://github.com/Moaaz-i/Needful",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 1093,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": false,
-    "defaultBranch": "main",
-    "createdAt": "2025-11-29T13:26:17Z",
-    "pushedAt": "2026-07-28T03:53:00Z",
-    "updatedAt": "2026-07-28T03:53:24Z",
-    "topLangs": [
-      {
-        "lang": "TypeScript",
-        "pct": 98
-      },
-      {
-        "lang": "CSS",
-        "pct": 1.9
-      },
-      {
-        "lang": "JavaScript",
-        "pct": 0.1
       }
     ],
     "contributors": 1,
@@ -570,7 +1001,7 @@
     "desc": "Moaaz Yahia Zakaria | Node.js | Group: 45 | Saturday (12:00 PM - 6:00 PM) | Online | Assignment JS - 1",
     "lang": "TypeScript",
     "url": "https://github.com/Moaaz-i/Assignment-1",
-    "demo": "",
+    "demo": "https://Moaaz-i.github.io/Assignment-1/",
     "stars": 0,
     "forks": 0,
     "openIssues": 0,
@@ -764,94 +1195,6 @@
     }
   },
   {
-    "name": "microtaskx.github.io",
-    "desc": "",
-    "lang": "CSS",
-    "url": "https://github.com/Moaaz-i/microtaskx.github.io",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 72,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2026-06-24T02:35:31Z",
-    "pushedAt": "2026-06-24T05:36:52Z",
-    "updatedAt": "2026-06-24T05:36:56Z",
-    "topLangs": [
-      {
-        "lang": "CSS",
-        "pct": 51.5
-      },
-      {
-        "lang": "HTML",
-        "pct": 48.5
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "cursor-sdk-cli",
-    "desc": "Local Cursor SDK CLI for one-shot repo questions",
-    "lang": "",
-    "url": "https://github.com/Moaaz-i/cursor-sdk-cli",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 0,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": false,
-    "defaultBranch": "main",
-    "createdAt": "2026-05-31T05:45:43Z",
-    "pushedAt": "2026-05-31T05:45:44Z",
-    "updatedAt": "2026-05-31T05:45:44Z",
-    "topLangs": [],
-    "contributors": 0,
-    "latestRelease": null
-  },
-  {
-    "name": "moz-chatgpt",
-    "desc": "",
-    "lang": "TypeScript",
-    "url": "https://github.com/Moaaz-i/moz-chatgpt",
-    "demo": "https://moz-chatgpt.vercel.app",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 271,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": false,
-    "defaultBranch": "main",
-    "createdAt": "2026-01-25T09:10:31Z",
-    "pushedAt": "2026-02-24T09:52:34Z",
-    "updatedAt": "2026-02-24T09:52:38Z",
-    "topLangs": [
-      {
-        "lang": "TypeScript",
-        "pct": 84.7
-      },
-      {
-        "lang": "CSS",
-        "pct": 14
-      },
-      {
-        "lang": "JavaScript",
-        "pct": 1.1
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
     "name": "My-Portfolio",
     "desc": "Glad you've made it this far. This is my portfolio, and I'd love for you to learn more about me.",
     "lang": "TypeScript",
@@ -922,41 +1265,6 @@
     "latestRelease": null
   },
   {
-    "name": "Weather",
-    "desc": "",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/Weather",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 310,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-09-10T17:40:03Z",
-    "pushedAt": "2025-09-10T18:06:26Z",
-    "updatedAt": "2025-09-10T18:06:29Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 41.7
-      },
-      {
-        "lang": "CSS",
-        "pct": 30.7
-      },
-      {
-        "lang": "HTML",
-        "pct": 27.6
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
     "name": "user-manager-api",
     "desc": "",
     "lang": "Python",
@@ -992,46 +1300,11 @@
     "latestRelease": null
   },
   {
-    "name": "Login-System",
-    "desc": "",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/Login-System",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 299,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-09-03T07:17:41Z",
-    "pushedAt": "2025-09-05T07:48:11Z",
-    "updatedAt": "2025-09-05T07:48:14Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 59.5
-      },
-      {
-        "lang": "HTML",
-        "pct": 34.4
-      },
-      {
-        "lang": "CSS",
-        "pct": 6.1
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
     "name": "Moaaz-i",
     "desc": "Config files for my GitHub profile.",
     "lang": "",
     "url": "https://github.com/Moaaz-i/Moaaz-i",
-    "demo": "https://github.com/Moaaz-i",
+    "demo": "",
     "stars": 0,
     "forks": 0,
     "openIssues": 0,
@@ -1056,7 +1329,7 @@
     "desc": "",
     "lang": "JavaScript",
     "url": "https://github.com/Moaaz-i/sample-api",
-    "demo": "",
+    "demo": "https://Moaaz-i.github.io/sample-api/",
     "stars": 0,
     "forks": 0,
     "openIssues": 0,
@@ -1077,111 +1350,6 @@
       {
         "lang": "HTML",
         "pct": 5.4
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "Bookmark",
-    "desc": "",
-    "lang": "TypeScript",
-    "url": "https://github.com/Moaaz-i/Bookmark",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 538,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-08-25T17:38:54Z",
-    "pushedAt": "2025-08-26T05:44:20Z",
-    "updatedAt": "2025-08-26T05:44:24Z",
-    "topLangs": [
-      {
-        "lang": "TypeScript",
-        "pct": 43.4
-      },
-      {
-        "lang": "HTML",
-        "pct": 34.1
-      },
-      {
-        "lang": "CSS",
-        "pct": 22.5
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "crud_system",
-    "desc": "",
-    "lang": "JavaScript",
-    "url": "https://github.com/Moaaz-i/crud_system",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 691,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-08-24T15:16:24Z",
-    "pushedAt": "2025-08-24T17:54:21Z",
-    "updatedAt": "2025-08-24T17:54:24Z",
-    "topLangs": [
-      {
-        "lang": "JavaScript",
-        "pct": 62.7
-      },
-      {
-        "lang": "HTML",
-        "pct": 33.3
-      },
-      {
-        "lang": "CSS",
-        "pct": 3.9
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "Random-Quote-Generator",
-    "desc": "",
-    "lang": "CSS",
-    "url": "https://github.com/Moaaz-i/Random-Quote-Generator",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 4,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-08-20T14:27:50Z",
-    "pushedAt": "2025-08-20T14:56:24Z",
-    "updatedAt": "2025-08-20T14:56:27Z",
-    "topLangs": [
-      {
-        "lang": "CSS",
-        "pct": 49.9
-      },
-      {
-        "lang": "JavaScript",
-        "pct": 41.5
-      },
-      {
-        "lang": "HTML",
-        "pct": 8.6
       }
     ],
     "contributors": 1,
@@ -1220,196 +1388,6 @@
       }
     ],
     "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "Exam",
-    "desc": "",
-    "lang": "HTML",
-    "url": "https://github.com/Moaaz-i/Exam",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 1489,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-08-10T19:01:40Z",
-    "pushedAt": "2025-08-11T06:58:18Z",
-    "updatedAt": "2025-08-11T06:58:21Z",
-    "topLangs": [
-      {
-        "lang": "HTML",
-        "pct": 100
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "Grid_masterclass",
-    "desc": "",
-    "lang": "HTML",
-    "url": "https://github.com/Moaaz-i/Grid_masterclass",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 700,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-08-05T20:24:19Z",
-    "pushedAt": "2025-08-05T20:32:11Z",
-    "updatedAt": "2025-08-05T20:32:14Z",
-    "topLangs": [
-      {
-        "lang": "HTML",
-        "pct": 100
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "DevFolio",
-    "desc": "",
-    "lang": "HTML",
-    "url": "https://github.com/Moaaz-i/DevFolio",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 1439,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-07-23T15:06:49Z",
-    "pushedAt": "2025-07-29T17:39:41Z",
-    "updatedAt": "2025-07-29T17:39:44Z",
-    "topLangs": [
-      {
-        "lang": "HTML",
-        "pct": 86.6
-      },
-      {
-        "lang": "CSS",
-        "pct": 12.5
-      },
-      {
-        "lang": "JavaScript",
-        "pct": 0.9
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "Mealify",
-    "desc": "",
-    "lang": "CSS",
-    "url": "https://github.com/Moaaz-i/Mealify",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 6886,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-07-10T11:09:37Z",
-    "pushedAt": "2025-07-11T07:56:54Z",
-    "updatedAt": "2025-07-11T07:56:58Z",
-    "topLangs": [
-      {
-        "lang": "CSS",
-        "pct": 89.6
-      },
-      {
-        "lang": "HTML",
-        "pct": 10
-      },
-      {
-        "lang": "JavaScript",
-        "pct": 0.4
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "Fokir",
-    "desc": "",
-    "lang": "CSS",
-    "url": "https://github.com/Moaaz-i/Fokir",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 671,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-07-04T15:12:38Z",
-    "pushedAt": "2025-07-07T10:38:09Z",
-    "updatedAt": "2025-07-07T10:38:13Z",
-    "topLangs": [
-      {
-        "lang": "CSS",
-        "pct": 57.6
-      },
-      {
-        "lang": "HTML",
-        "pct": 40.1
-      },
-      {
-        "lang": "JavaScript",
-        "pct": 2.3
-      }
-    ],
-    "contributors": 1,
-    "latestRelease": null
-  },
-  {
-    "name": "Engage_Bakery",
-    "desc": "",
-    "lang": "HTML",
-    "url": "https://github.com/Moaaz-i/Engage_Bakery",
-    "demo": "",
-    "stars": 0,
-    "forks": 0,
-    "openIssues": 0,
-    "sizeKb": 892,
-    "license": "",
-    "topics": [],
-    "archived": false,
-    "hasPages": true,
-    "defaultBranch": "main",
-    "createdAt": "2025-07-01T15:07:28Z",
-    "pushedAt": "2025-07-01T20:22:42Z",
-    "updatedAt": "2025-07-01T20:22:45Z",
-    "topLangs": [
-      {
-        "lang": "HTML",
-        "pct": 69
-      },
-      {
-        "lang": "CSS",
-        "pct": 31
-      }
-    ],
-    "contributors": 0,
     "latestRelease": null
   },
   {

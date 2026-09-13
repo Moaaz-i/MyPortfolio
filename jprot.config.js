@@ -282,5 +282,6 @@ export default {
   head: `<link rel="icon" type="image/png" href="${AVATAR}">
     <link rel="apple-touch-icon" href="${AVATAR}">
     <script src="/hash-scroll.js" defer></script>
-    <script src="/repos-pager.js" defer></script>`,
+    <script src="/repos-pager.js" defer></script>
+    <script src="/live-shots.js" defer></script>`,
 };

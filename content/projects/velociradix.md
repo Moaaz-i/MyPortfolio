@@ -2,7 +2,7 @@
 title: Velociradix
 order: 3
 date: 2026-08-27
-cover: /covers/velociradix.svg
+cover: /shots/velociradix.png
 image: /covers/velociradix.svg
 excerpt: Node.js HTTP framework with a C++17 native engine — kqueue/epoll workers, radix-trie router, custom HTTP parser.
 tags:

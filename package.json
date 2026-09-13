@@ -3,7 +3,10 @@
   "type": "module",
   "scripts": {
     "start": "jprot",
-    "build": "jprot export --out dist"
+    "build": "jprot export --out dist",
+    "repos:fetch": "node scripts/gen-repos.mjs",
+    "prestart": "node scripts/gen-repos.mjs",
+    "prebuild": "node scripts/gen-repos.mjs"
   },
   "dependencies": {
     "jprot": "^0.2.2"

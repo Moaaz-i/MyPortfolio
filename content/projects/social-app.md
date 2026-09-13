@@ -2,7 +2,7 @@
 title: Social App
 order: 12
 date: 2026-07-29
-cover: /covers/social-app.svg
+cover: /shots/social-app.png
 image: /covers/social-app.svg
 excerpt: LinkedIn-like professional networking platform built with React, Tailwind CSS, and FastAPI backend.
 tags:
@@ -10,7 +10,7 @@ tags:
   - Python
   - FastAPI
   - Full-Stack
-demo: https://social-app-two-tau.vercel.app
+demo: https://fastsocial.vercel.app/
 repo: https://github.com/Moaaz-i/social_app
 ---
 

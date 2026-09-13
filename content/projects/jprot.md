@@ -2,7 +2,7 @@
 title: JPROT
 order: 2
 date: 2026-09-11
-cover: /covers/jprot.svg
+cover: /shots/jprot.png
 image: /covers/jprot.svg
 excerpt: Zero-build portfolio site generator with SSR, SPA navigation, dark mode, 4 themes, and instant search — all in ~30KB.
 tags:

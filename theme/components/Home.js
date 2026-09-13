@@ -41,8 +41,11 @@ export default function Home(props) {
       : ''
     const tagAttrs = Array.isArray(p.data.tags) ? p.data.tags.map((t) => `tag-${esc(t)}`).join(' ') : ''
     const desc = p.data.excerpt || p.data.description || p.body.split('\n').slice(0, 3).join(' ')
+    const liveAttrs = p.data.demo && /^https?:\/\//i.test(String(p.data.demo)) && !/^(?:https?:\/\/)?(?:www\.)?github\.com\//i.test(String(p.data.demo))
+      ? ` data-live-shot data-live="${esc(p.data.demo)}" data-static="${esc(p.data.cover || '')}"`
+      : ''
     const cover = p.data.cover
-      ? `<div class="project-cover"><img src="${esc(p.data.cover)}" alt="${esc(p.data.title || '')}" loading="lazy"><div class="cover-shine"></div></div>`
+      ? `<div class="project-cover"><img src="${esc(p.data.cover)}" alt="${esc(p.data.title || '')}" loading="lazy"${liveAttrs}><div class="cover-shine"></div></div>`
       : '<div class="project-cover project-cover-plain"></div>'
     return `
       <article class="project-card" data-tags="${tagAttrs}" style="animation-delay:${(i % 3) * 0.08}s" data-animate>

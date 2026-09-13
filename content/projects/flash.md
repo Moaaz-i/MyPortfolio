@@ -2,7 +2,7 @@
 title: FLASH
 order: 1
 date: 2026-08-28
-cover: /covers/flash.svg
+cover: /shots/flash.png
 image: /covers/flash.svg
 excerpt: Zero-knowledge encrypted document database engine with HNSW vector search, AI-native RAG, and server-blind architecture.
 tags:
